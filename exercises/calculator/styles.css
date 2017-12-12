@@ -1,0 +1,19 @@
+#add {
+    margin: 0 auto;
+    height: 300px;
+    background-color: indianred;
+}
+
+#subtract {
+    margin: 0 auto;
+    height: 300px;
+    background-color: rgb(40, 179, 214);
+}
+
+#multiply {
+    margin: 0 auto;
+    height: 300px;
+    background-color: rgba(192, 132, 241, 0.829);
+}
+
+

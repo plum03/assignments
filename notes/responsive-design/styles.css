@@ -1,0 +1,31 @@
+#box {
+    background-color: lightcoral;
+    height: 100px;
+}
+
+/* changes box color when screen-size width = 500px and above */
+@media (min-width: 1100px) {
+    #box {
+        background-color: slateblue;
+    }
+}
+
+/* changes color when between 500px and 800px */
+/* and both conditions need to be true */
+@media (min-width: 500px) and (max-width: 800px) {
+    #box {
+        background-color: cornflowerblue
+    }
+}
+
+/* makes box height larger on tail ends - less than 450px and greater than 1150px */
+/* use comma ',' for 'or' */
+/* or meaning when either one is true */
+@media (max-width: 450px), (min-width: 1150px) {
+    #box {
+        height: 300px;
+    }
+}
+
+/* BE CAREFUL: CSS reads from top to bottom so any conflicting code placed below a codeblock will override the previous instructions. */
+

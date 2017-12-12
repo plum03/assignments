@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,100px);
+    grid-gap: 5px;
+    grid-template-areas: 
+        "p p p p"
+        "h1 h2 h3 h4"
+        "b1 b1 b2 b2"
+        "g g g o";
+        
+}
+.pink{
+    background-color: pink;
+    grid-area: p;
+}
+.hot-pink {
+    background-color: hotpink;
+    grid-area: h1 h2 h3 h4;
+}
+
+.blue {
+    background-color: skyblue;
+    grid-area: b1 b2;
+
+}
+.green {
+    background-color: lightgreen;
+    grid-area: g;
+}
+.orange {
+    background-color: gold;
+    grid-area: o;
+}
+
+
