@@ -1,0 +1,1 @@
+This file is associated with the VSchool Node/JavaScript Calculator exercise which can be found at http://coursework.vschool.io/javascript-calculator/

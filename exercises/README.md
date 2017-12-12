@@ -1,0 +1,1 @@
+This is a collection of my VSchool assignments, warm-up exercises, projects and just general coding notes.

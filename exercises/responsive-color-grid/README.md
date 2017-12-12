@@ -1,0 +1,1 @@
+This file is associated with the VSchool Responsive Color Grid assignment

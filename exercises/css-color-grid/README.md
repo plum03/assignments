@@ -1,0 +1,1 @@
+This is the file associated with the VSchool CSS Color Grid exercise which can be found at https://coursework.vschool.io/color-grid-from-scratch/

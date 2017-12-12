@@ -1,0 +1,1 @@
+This is the file associated with the VSchool Design a Blog exercise which can be found at https://coursework.vschool.io/design-a-blog/

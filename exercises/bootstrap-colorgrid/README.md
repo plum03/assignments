@@ -1,0 +1,1 @@
+This is the file associated with the VSchool Responsive Color Grid Bootstrap exercise which can be found at https://coursework.vschool.io/responsive-color-grid-bootstrap/

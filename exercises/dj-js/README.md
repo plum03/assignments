@@ -1,0 +1,1 @@
+This is the file associated with the VSchool DJ JS exercise which can be found at http://coursework.vschool.io/dj-js/

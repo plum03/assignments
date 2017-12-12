@@ -1,0 +1,1 @@
+This file is a spin on the VSchool Color Grid From Scratch assignment (https://coursework.vschool.io/color-grid-from-scratch/) except this time we are creating the color grid using flex-box

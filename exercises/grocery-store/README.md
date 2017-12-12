@@ -1,0 +1,1 @@
+This file is associated with the VSchool Grocery Store assignment which can be found at http://coursework.vschool.io/grocery-store-js/

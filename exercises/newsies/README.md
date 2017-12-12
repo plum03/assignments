@@ -1,0 +1,1 @@
+This file is associated with the VSchool Newsies exercise which can be found at http://coursework.vschool.io/block-vs-inline-newsies/
