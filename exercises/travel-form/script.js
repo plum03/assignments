@@ -7,12 +7,12 @@ var displayInfo = function() {
         gender += genderArr[i].value
     }
 
-    var locationArr = document.getElementsByName("location")
-    var location =""
-    for (j=0; j<locationArr.length; j++) {
-        if (locationArr[j].checked)
-        location += locationArr[j].value
-    }
+    var locations = document.getElementById("locations").value
+    // var location =""
+    // for (j=0; j<locationArr.length; j++) {
+    //     if (locationArr[j].selected)
+    //     location += locationArr[j].value
+    // }
     var mealArr = document.getElementsByName("meal")
     var meal = ""
     for (k=0; k<mealArr.length; k++) {
@@ -26,6 +26,6 @@ var displayInfo = function() {
 "Last Name: " + document.getElementsByName("lname")[0].value+ "\n"
 + "Age: " +document.getElementsByName("age")[0].value + "\n" +
 "Gender: " +gender + "\n" +
-"Destination: " +location+ "\n" +
+"Destination: " +locations+ "\n" +
 "Meal: " +meal+ "\n" )
 }

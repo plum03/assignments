@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.2.1.min.js"></script>
     
 </head>
 <body>
@@ -21,13 +22,19 @@
         <input type="radio" name="gender" value="Male"/> Male
         <input type="radio" name="gender" value="Female"/> Female
         <h2>Destination Location</h2>
-        <input type="checkbox" name="location" value="Arizona"/> Arizona
+        <select id="locations" name="location">
+            <option id="SF" value="San Francisco, CA">San Francisco, CA</option>
+            <option id="LA" value="Los Angeles, CA">Los Angeles, CA</option>
+            <option id="SLC" value="Salt Lake City, UT">Salt Lake City, UT</option>
+        </select>
+
+        <!-- <input type="checkbox" name="location" value="Arizona"/> Arizona
         <input type="checkbox" name="location" value="California"/> California
-        <input type="checkbox" name="location" value="Oregon"/> Oregon
+        <input type="checkbox" name="location" value="Oregon"/> Oregon -->
         <h2>Meal Type</h2>
-        <input class="box" type="checkbox" name="meal" value="Chicken"/> Chicken
-        <input class="box" type="checkbox" name="meal" value="Beef"/> Beef
         <input class="box" type="checkbox" name="meal" value="Vegetarian"/> Vegetarian
+        <input class="box" type="checkbox" name="meal" value="Low Sodium"/> Beef
+        <input class="box" type="checkbox" name="meal" value="Kosher"/> Vegetarian
         <br><br>
         <button onclick="displayInfo()">Submit</button>
     </form>
