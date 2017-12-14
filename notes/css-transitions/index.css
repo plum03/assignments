@@ -1,0 +1,25 @@
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: aquamarine;
+    margin: auto;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 10%;
+    transition: all none ease-in .4s;
+    /* Place CSS Transitions in the original element, not the :hover */
+
+    /* this refers to the properties defined in the :hover */
+    /* transition-property: all; */
+    /* all for all or select specific transitions by name: i.e.background-color, border-radius; */
+    /* The time it takes to complete transition */
+    /* transition-duration: 3s;
+    transition-timing-function: ease-in; */
+    /* the time it takes before the transition BEGINS */
+    /* transition-delay: 2s; */
+}
+
+.box:hover {
+    background-color: indianred;
+    border-radius: 0;
+}
