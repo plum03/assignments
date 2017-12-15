@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0 auto;
+    color:rgb(46, 85, 85);
+    background-color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 66% 33%;
+    grid-gap: 0;
+
+}
+
+.header {
+    grid-area: 1
+}
+
+.header-btn {
+    grid-area: 2
+}
+
+.intro {
+    grid-area: 3
+}
+
+.designs {
+    grid-area: 4;
+}
+
+.participation {
+    grid-area: 5
+}
+
+.resources {
+    grid-area: 6
+}
+
+.requirements {
+    grid-area: 7
+}
