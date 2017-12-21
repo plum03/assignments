@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0 auto;
+    color:rgb(46, 85, 85);
+    background-color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 310px auto auto auto 320px 178px;
+    /* justify-content: space-evenly; */
+    grid-template-areas: 
+    "head btn" 
+    "intro designs" 
+    "benefit resources"
+    "reqs green"
+    "foot1 foot1"
+    "foot2 foot2";
+
+}
+
+.header {
+    grid-area: head;
+    height: 310px;
+    min-width: 610px;
+    background-image: url(../images/gridlines.png), url(../images/noise/png), url(../images/contours.png), url(../images/huntington.jpg);   
+    background-position:  0 -25px;
+    background-size: auto, auto, cover;
+    border-top: 7px solid rgba(15, 58, 59, 0.692);
+    background-attachment: scroll, scroll, fixed;
+}
+
+.header-btn {
+    grid-area: btn;
+}
+
+.intro {
+    grid-area: intro;
+}
+
+.designs {
+    grid-area: designs;
+}
+
+.benefit {
+    grid-area: benefit;
+}
+
+.resources {
+    grid-area: resources;
+}
+
+.requirements {
+    grid-area: reqs;
+}
+
+.green-box {
+    grid-area: green;
+    background-color: rgba(229, 237, 232, 0.97);
+}
+
+.footer-img {
+    grid-area: foot1;
+}
+
+.footer-solid {
+    grid-area: foot2;
+    background-color: #134347;
+}
+
+p {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 10px;
+    width: 80%;
+}

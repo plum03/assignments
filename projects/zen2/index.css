@@ -1,0 +1,746 @@
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+
+@font-face {
+	font-family: 'verdemoderna';
+	src: url('fonts/verdemoderna.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0 auto;
+    color:rgb(46, 85, 85);
+    background-color: white;
+    font-family: 'Libre Baskerville', serif;
+    
+}
+
+#grid-container {
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4 auto);
+    grid-template-areas: 
+    "head"
+    "main"
+    "footer1"
+    "footer2";
+}
+
+.header {
+    height: 310px;
+    width: 100%;
+    grid-area: head;
+    background-image: url(images/gridlines.png), url(images/noise.png), url(images/contours.png), url(images/huntington.jpg);
+    background-attachment: scroll scroll scroll fixed;
+    background-repeat: repeat repeat repeat no-repeat;
+    background-size: auto auto auto cover;
+    background-position: 0 -25px, 0 0, 0 0, 0 -150px;
+    /* text-align: center; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    
+    "title btn"
+    
+    ;
+
+}
+
+h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: uppercase; 
+    color: white;
+    font-size: 48px;
+    font-weight: normal;
+    text-align: left;
+}
+
+h2 { 
+    letter-spacing: -1px;
+	margin: 0 auto;
+	font-weight: normal;
+	display: block;
+	padding-top: 5px;
+	/* padding-bottom: 30px; */
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 24px;
+    font-style: italic;
+    text-align: left;
+}
+
+/* Header Logo */
+h1::before {
+	content: "";
+    display: inline-block;
+    width: 125px;
+    height: 125px;
+    background: url(./images/enso.svg);
+    background-size: 100%;
+    position: relative;
+    top: 70px;  
+    margin-right: 30px;
+	margin-left: 100px;
+	opacity: 0.5;
+}
+
+/* Blank space for alignment */
+h2::before {
+	content: " ";
+	padding: 50px;
+}
+
+div.title {
+    grid-area: title;
+    width: 100%;
+   
+}
+
+.button {
+    width: 100%;
+    grid-area: btn;
+    background-color: rgba(64, 104, 105, 0.425);
+    margin: auto;
+}
+
+ button {
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(229, 237, 232, 0.185);
+    border: transparent;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /* padding: 0 3%; */
+    color: white;
+    opacity: 0.6;
+    height: 70px;
+}
+
+#btn1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#btn {
+    font-size: 34px;
+    font-family: 'verdemoderna';
+    font-weight: normal;
+    width: 70px;
+    
+}
+
+.main {
+    width: 100%;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3 auto);
+    grid-template-areas: 
+    "intro designs"
+    "benefits faqs"
+    "reqs grn"
+}
+
+h3 {
+	margin: 15px 0px;
+	color: #2e484c;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 28px;
+	font-weight: normal;
+    text-transform: uppercase;
+    padding: 5px 0 0 0;
+    line-height: 1.5;
+}
+
+p {
+    color: #325050;
+    line-height: 1.5; 
+    padding: 5px 0px; 
+}
+
+#intro {
+    grid-area: intro;
+    width: 80%;
+    margin: 5px auto;
+    padding: 30px 0px;
+}
+
+.design-selection {
+    grid-area: designs;
+    background-color: #e5ede8;
+    width: 100%;
+}
+
+/* #bamboo {
+    grid-area: bamboo;
+    background-attachment: scroll, scroll, fixed;
+	background-color: rgba(138, 188, 159, 0.5);
+	background-image: url(images/contours.png), url(images/gridlines.png), url(images/bamboo.png);
+	background-repeat: repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "benefits faqs"
+} */
+
+#benefits {
+    grid-area: benefits;
+    background-attachment: scroll, scroll, fixed;
+	background-color: rgba(138, 188, 159, 0.5);
+	background-image: url(images/contours.png), url(images/gridlines.png), url(images/bamboo.png);
+	background-repeat: repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+    width: 100%;
+    /* width: 80%; */
+    margin: 0 auto;
+    padding: 30px 0px;
+}
+#benefits p, h3 {
+    width: 80%;
+    margin: auto;
+}
+
+/* .faqs {
+    grid-area: faqs;
+    background-color: rgba(185, 213, 196, 0.534);
+    background-image: url(images/gridlines-opaque.png), url(images/contours.png), url(images/bamboo.png);
+	background-repeat: repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+    width: 100%;
+    color: #374344;
+	text-decoration: none;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "zr";
+} */
+
+.zen-resources {
+    grid-area: faqs;
+    width: 100%;
+    color: #374344;
+    text-decoration: none;
+    overflow: hidden;
+	background-color: rgba(96, 161, 122, 0.493);
+    background-image: url(images/contours.png), url(images/gridlines.png), url(images/bamboo.png);
+    background-attachment: scroll, scroll, fixed;
+}
+
+#reqs {
+    grid-area: reqs;
+    width: 80%;
+    margin: 5px auto;
+    padding: 30px 0px;
+}
+
+#green {
+    grid-area: grn;
+    background-color: rgb(229, 237, 232);
+    width: 100%;
+
+}
+
+.footer1 {
+    grid-area: footer1;
+    /* background-image: url(./images/gridlines.png), url(./images/contours.png), url(./images/koi.jpg);
+    background-size: auto, auto, cover;
+    height: 320px; */
+    width: 100%;
+    text-align: center;
+}
+
+.footer2 {
+    grid-area: footer2;
+    content: " ";
+    height: 176px;
+    width: 100%;
+    background-color: rgb(19, 67, 71);
+    background-size: 100%;
+    text-align: center;
+}
+
+#intro a, #intro a:visited {
+	position: relative;
+	display: inline-block;
+	padding: 1px 10px 1px 32px;
+	margin: -1px -10px -1px -6px;
+	border-radius: 1px;
+	color: #809b7e;
+	font-family: 'Julius Sans One', sans-serif;
+	text-transform: uppercase;
+}
+
+#intro, #benefits, #reqs {
+    padding: 50px 0;
+}
+
+.design-name {
+    font-family: 'Julius Sans One', sans-serif;
+    /* padding: 10px 0; */
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    font-style: normal; 
+    padding-top: 5px;
+}
+
+.designer-name {
+    font-style: normal;
+}
+.design-selection ul,
+.zen-resources ul {
+    width: 80%;
+    list-style-type: none;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.zen-resources li {
+    border-top: solid 1px #a0b9ad;
+    font-style: normal;
+    float: left;
+    /* width: 80%; */
+    padding: 1.5em 10%;
+  }
+  .zen-resources li:last-child {
+    float: left;
+    border-bottom: solid 1px #a0b9ad;
+    padding: 1.5em 10%;
+    border-top: solid 1px #a0b9ad;
+    font-style: normal;
+  }
+
+.design-selection li,
+ {
+	float: left;
+	/* width: 80%; */
+	padding: 1.5em 10%;
+	border-top: solid 1px #a0b9ad;
+	color: #c0cac3;
+	font-style: italic;
+}
+
+.design-selection li:hover,
+.design-selection li:focus {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.design-selection .design-name,
+.zen-resources a,
+li.viewall a {
+	display: block;
+	margin-bottom: 0.25em;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 1.2em;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.design-selection .designer-name .zen-resources {
+	color: #616857;
+	font-size: 0.9em;
+	font-style: normal;
+}
+
+.zen-resources a {
+    color: #607476;
+	text-decoration: none;
+}
+
+.design-selection a {
+	color: #607476;
+	text-decoration: none;
+}
+
+.design-selection a:hover,
+.design-selection a:focus {
+	color: #49968e;
+}
+
+.zen-resources li {
+    border-top: solid 1px #a0b9ad;
+    font-style: normal;
+    padding: 3% 0;
+}
+.design-selection li {
+    padding-bottom: 20px;
+    /* border-bottom: 1px solid slategray;  */
+    color: #c0cac3;
+	font-style: italic;
+}
+
+.design-selection li, a {
+    font-style: italic;
+    color: #c0cac3; 
+}
+
+.design-selection .designer-name {
+	color: #616857;
+	font-size: 0.9em;
+	font-style: normal;
+}
+
+.footer1 p {
+	width: auto;
+	padding: 7% 12%;
+	margin: 0;
+	color: rgba(255, 255, 255, 0.4);
+	background: #3e5d67;
+	background-attachment: fixed, fixed, fixed, scroll;
+	background-image: url(images/contours.png), url(images/gridlines.png), url(images/noise.png), url(images/koi.jpg);
+	background-position: 0 0, -5px -25px, 0 0, 0 50%;
+	background-repeat: repeat, repeat, repeat, no-repeat;
+	background-size: 50% auto, auto, auto, cover;
+	font-size: 2em;
+	font-style: italic;
+	text-align: center;
+}
+
+.footer1 p a {
+	color: rgba(255, 255, 255, 0.7);
+	font-style: normal;
+}
+
+footer {
+	clear: both;
+	padding: 3em 10%;
+	color: #fff;
+	background: #134347;
+    text-align: center;
+}
+
+footer a {
+    font-style: normal;
+	display: inline-block;
+	overflow: hidden;
+	width: 40px;
+	height: 40px;
+	padding: 40px 0 0 0;
+	margin: 0 0.5em;
+	position: relative;
+	color: rgba(255, 255, 255, 0.5);
+	transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+footer a:hover,
+footer a:focus {
+	color: rgba(255, 255, 255, 0.3);
+	text-decoration: none;
+}
+
+footer a:visited {
+	color: rgba(255, 255, 255, 0.2);
+}
+
+footer a::before {
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 0;
+	overflow: visible;
+	font-size: 36px;
+	text-indent: 0;
+	font-family: 'verdemoderna';
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+}
+
+footer a.zen-validate-html::before {
+	content: "5";
+}
+
+footer a.zen-validate-html:hover::before,
+footer a.zen-validate-html:focus::before {
+	content: "%";
+}
+
+footer a.zen-validate-css::before {
+	content: "3";
+}
+
+footer a.zen-validate-css:hover::before,
+footer a.zen-validate-css:focus::before {
+	content: "#";
+}
+
+footer a.zen-license::before {
+	content: "c";
+}
+
+footer a.zen-license:hover::before,
+footer a.zen-license:focus::before {
+	content: "C";
+}
+
+footer a.zen-accessibility::before {
+	content: "a";
+}
+
+footer a.zen-accessibility:hover::before,
+footer a.zen-accessibility:focus::before {
+	content: "A";
+}
+
+footer a.zen-github::before {
+	content: "g";
+}
+
+footer a.zen-github:hover::before,
+footer a.zen-github:focus::before {
+	content: "G";
+}
+
+a {
+	color: #0d8ba1;
+}
+
+a:visited {
+	color: #1a5952;
+}
+
+a:hover, a:focus {
+	color: #0599c2;
+	text-decoration: underline;
+}
+
+@media only screen and (min-width: 1132px) {
+	
+	.header {
+        margin: 0 auto;
+		width: 100%;
+		height: 310px;
+		
+		border-top: solid 12px rgba(19, 67, 71, 0.8);
+		box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.3);
+		vertical-align: middle;
+		text-align: left;
+    }
+    .title {
+        margin-left: 10%;
+    }
+	.header::before,
+	.header::after {
+		display: block;
+		content: " ";
+		position: absolute;
+		z-index: 3;
+		top: 9px;
+		left: 0;
+		width: 100%;
+		height: 7px;
+		background: rgba(0, 39, 43, 0.2);
+	}
+	.header::after {
+		top: 306px;
+		height: 4px;
+		background: rgba(0, 39, 43, 0.075);
+    }
+    .button {
+        margin: 0 auto;
+        text-align: center;
+    }
+    #btn {
+        margin: 0 auto;
+        text-align: center;
+    }
+	h1 {
+		display: inline-block;
+		position: relative;
+		margin: 15px 0 0 0;
+		padding: 60px 0 5px 0;
+	}
+	h1::before {
+		display: inline-block;
+		position: relative;
+		top: 65px;
+		content: "";
+		width: 125px;
+		height: 125px;
+		margin: -65px 40px 0 0;
+		background: url(images/enso.svg);
+		background-size: 100%;
+		opacity: 0.6;
+	}
+	h2 {
+		display: block;
+		margin: 0;
+		padding: 5px 0 60px 70px;
+	}
+	p {
+		font-size: 16px;
+    }
+    
+    li {
+        font-size: 16px;
+    }
+	
+}	
+
+@media only screen and (min-width: 1150px) {
+	footer a {
+		width: 76px;
+		height: 76px;
+		padding: 76px 0 0 0;
+		margin: 0 3em;
+	}
+	footer a::before {
+		font-size: 72px;
+	}
+}
+
+@media only screen and (max-width: 1132px) {
+    body {
+        /* width: 100%; */
+        padding: 0px;
+        margin: 0px;
+    }
+    #grid-container {
+        display: grid;
+        /* width: 100%; */
+        grid-template-columns: 100%;
+        grid-template-rows: 300px auto 200px 150px 320px 195px 0px;
+        grid-template-areas: 
+        "head"
+        "main"
+        "footer1"
+        "footer2"
+        "designs"
+        "faqs";
+        /* "btn btn"
+        "intro intro"
+        "benefits benefits"
+        "reqs reqs"
+        "footer1 footer1"
+        "footer2 footer2"
+        "design design"
+        "faqs faqs" */
+    }
+    .main {
+        grid-area: main;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "intro"
+        "benefits"
+        "reqs";
+    }
+
+    .header {
+        grid-area: head;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto auto auto;
+        grid-template-areas: 
+        "h1"
+        "h2"
+        "btn"
+    }
+
+    .button {
+        grid-area: btn;
+
+    }
+    #intro {
+        grid-area: intro;
+        width: 90%;
+    }
+    /* .design-selection {
+        grid-area: design;
+        width: 100%;
+        height: 320px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4 80px);
+        grid-template-areas: 
+        "1 2"
+        "3 4"
+        "5 6"
+        "7 8";
+    }
+    #d1 {
+        grid-area: 1;
+    }
+    #d2 {
+        grid-area: 2;
+    }
+    #d3 {
+        grid-area: 3;
+    }
+    #d4 {
+        grid-area: 4;
+    }
+    #d5 {
+        grid-area: 5;
+    }
+    #d6 {
+        grid-area: 6;
+    }
+    #d7 {
+        grid-area: 7;
+    }
+    #d8 {
+        grid-area: 8;
+    } */
+
+    .design-selection {
+        grid-area: designs;
+    }
+    #bamboo {
+        grid-area: bamboo;
+        background-image: none;
+    }
+    #green {
+        grid-area: grn;
+        display: none;
+    }
+    #benefits {
+        grid-area: benefits;
+        width: 100%;
+    }
+    .zen-resources {
+        grid-area: faqs;
+    }
+    #reqs {
+        grid-area: reqs;
+        width: 90%;
+    }
+    .footer1 {
+        grid-area: footer1;
+    }
+    .footer2 {
+        grid-area: footer2;
+    }
+    .design-selection li, .zen-resources li {
+        float: left;
+        width: 50%;
+        padding: 1.5em 10%;
+        border-top: solid 1px #d9e3dc;
+        color: #c0cac3;
+        font-style: italic;
+    }p,
+	li {
+		font-size: 1.2em;
+	}
+
+}
+

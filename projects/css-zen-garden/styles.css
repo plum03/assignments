@@ -12,6 +12,14 @@ body {
     font-size: 16px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(6 auto);
+    grid-template-areas: 
+    ""
+}
+
 #header-img {
     height: 310px;
     min-width: 610px;
@@ -130,14 +138,14 @@ h3 {
 }
 
 #benefits {
-    background-image: url("./images/gridlines.png"), url("./images/contours.png"), url("./images/bamboo.png");
+    background-image: url(./images/gridlines.png), url(./images/contours.png), url(./images/bamboo.png);
     background-color: rgba(198, 223, 208, 0.527); 
     background-attachment: scroll, scroll, fixed;
     background-size: auto, auto, cover;   
 }
 
 #footer-img {
-    background-image: url("./images/gridlines.png"), url("./images/contours.png"), url("./images/koi.jpg");
+    background-image: url(./images/gridlines.png), url(./images/contours.png), url(./images/koi.jpg);
     background-size: auto, auto, cover;
     height: 320px;
     
