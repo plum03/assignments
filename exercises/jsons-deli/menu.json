@@ -1,0 +1,57 @@
+{
+    "appetizers": [{
+        "name": "mozzerlla sticks",
+        "ingredients": ["cheese", "bread crumbs"],
+        "description": "gooey"
+     },
+     {
+        "name": "potato soup",
+        "ingredients": ["pototoes", "water"],
+        "description": "thick and chunky"
+     }
+    ],
+
+    "cold sandwiches": [{
+        "name": "turkey guacamole",
+        "ingredients": ["turkey", "avocado"],
+        "description": "turkey guac"
+     },{
+        "name": "club",
+        "ingredients": ["ham", "turkey"],
+        "description": "club sandwich"
+    }],
+
+    "hot sandwiches": [{
+        "name": "blt",
+        "ingredients": ["bacon", "lettuce"],
+        "description": "crispy, delicious"
+     },
+     {
+        "name":"grilled cheese",
+        "ingredients": ["cheese", "bread"],
+        "description": "cheesy"
+    }],
+    
+    "desserts": [{
+        "name": "brownie",
+        "ingredients": ["chocolate", "eggs"],
+        "description": "chocolatey"
+     },
+     {
+        "name": "cookie",
+        "ingredients": ["flour", "sugar"],
+        "description": "homemade"
+    }],
+
+    "drinks": [{
+        "name": "lemonade",
+        "ingredients": ["lemons", "water", "sugar"],
+        "description": "refreshing"
+     },
+     {
+        "name": "tea",
+        "ingredients": ["tea leaves", "water"],
+        "description": "unsweetened"
+    }]
+        
+}
