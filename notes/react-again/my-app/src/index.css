@@ -1,0 +1,8 @@
+/* Universal CSS goes in main app src folder, along w/ global index.js */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
