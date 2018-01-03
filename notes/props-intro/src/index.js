@@ -3,4 +3,10 @@ import ReactDOM from "react-dom";
 
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// Provide props for App here:
+ReactDOM.render(
+    <App 
+        location="the Party" 
+        desc="It's the hottest spot in town" 
+        item="beer" />, 
+        document.getElementById("root"));
