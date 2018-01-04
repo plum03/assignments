@@ -24,7 +24,13 @@ function Gallery(props) {
             caption: "What?",
             author: "Me",
             backgroundUrl:"https://cdn.pixabay.com/photo/2017/12/29/16/34/fruit-3048001_960_720.jpg"
+        },
+        {
+            caption: null,
+            author: null,
+            backgroundUrl: null
         }
+
     ];
     return(
         <section className="gallery-wrapper">
