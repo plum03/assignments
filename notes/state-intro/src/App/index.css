@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 20px;
+}
+
+.box {
+    width: 33%;
+    height: 200px;
+    border: 2px solid lime;
+    margin: 20px 0;
+}
