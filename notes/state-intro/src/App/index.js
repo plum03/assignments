@@ -3,7 +3,7 @@ import './index.css';
 
 class App extends Component {
     constructor(props) {
-        super();
+        super(props);
         this.state = {
             counter: 0,
             color: "lime"
