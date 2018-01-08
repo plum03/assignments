@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import items from "../../shared/decor.json";
 import Item from "./Item";
 import Form from "./Form";
@@ -11,10 +11,9 @@ class DecorList extends Component {
         }
         this.addItem = this.addItem.bind(this);
         this.deleteItem = this.deleteItem.bind(this);
-        this.edit = this.edit.bind(this);
+        this.editItem = this.editItem.bind(this);
     }
-
-    addItem(item){
+    addItem(item) {
         this.setState((prevState) => {
             let newItems = [item, ...prevState.items];
             return {
@@ -22,34 +21,32 @@ class DecorList extends Component {
             }
         })
     }
-
     deleteItem(i) {
         this.setState((prevState) => {
             let newItems = [...prevState.items];
-            newItems.splice(i,1)
+            newItems.splice(i, 1);
             return {
                 items: newItems
             }
         })
     }
-
-    edit(editedItem, i) {
+    editItem(editedItem, i) {
         this.setState((prevState) => {
             let newItems = [...prevState.items];
             newItems[i] = editedItem;
             return {
-                item: newItems
+                items: newItems
             }
         })
     }
-    render(){
-        let {items} = this.state;
+    render() {
+        let { items } = this.state;
         return (
             <div>
                 <Form submit={this.addItem}></Form>
                 {items.map((item, i) => {
                     return (
-                        <Item index={i} edit={this.edit} deleteItem = {this.deleteItem} addItem={this.addItem} {...item} key={i}></Item>
+                        <Item index={i} editItem={this.editItem}deleteItem={this.deleteItem} key={i}{...item}></Item>
                     )
                 })}
             </div>
