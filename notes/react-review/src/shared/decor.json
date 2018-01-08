@@ -1,0 +1,27 @@
+[
+    {
+        "type": "lamp",
+        "color": "black",
+        "size": "large"
+    },
+    {
+        "type": "couch",
+        "color": "blue",
+        "size": "small"
+    },
+    {
+        "type": "mirror",
+        "color": "white",
+        "size": "large"
+    },
+    {
+        "type": "vase",
+        "color": "opal",
+        "size": "medium"
+    },
+    {
+        "type": "rug",
+        "color": "taupe",
+        "size": "large"
+    }
+]

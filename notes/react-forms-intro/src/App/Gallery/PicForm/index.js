@@ -11,6 +11,8 @@ class PicForm extends Component{
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        // this.clearInputs = this.clearInputs.bind(this);
+        // clearInputs does not require binding because it gets called in the handleSubmit which is already bound
     }
 
     handleChange(e){
@@ -24,11 +26,22 @@ class PicForm extends Component{
         })
     }
 
+    clearInputs(){
+        this.setState({
+            inputs: {
+                imgUrl: "",
+                caption: ""
+            }
+        })
+    }
+
     handleSubmit(e){
         e.preventDefault();
 
        this.props.addPic(this.state.inputs);
         alert("Your photo has been added to your gallery")
+
+        this.clearInputs();
     }
 
     render(){
