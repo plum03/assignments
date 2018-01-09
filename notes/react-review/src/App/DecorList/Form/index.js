@@ -36,6 +36,7 @@ class Form extends Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.submit(this.state.inputs, this.props.index);
+        
         this.clearInputs();
     }
 

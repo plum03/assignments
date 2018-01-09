@@ -1,8 +1,12 @@
 import React, {Component} from "react";
+import VacationSpots from "./VacationSpots";
+
 
 function App(props) {
     return (
-        <div></div>
+        <div>
+            <VacationSpots></VacationSpots>
+        </div>
     )
 }
 

@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Form from "../../Form";
+import {OverlayTrigger, Tooltip} from "react-bootstrap";
 
 class EditForm extends Component {
     constructor(props) {
@@ -7,7 +8,9 @@ class EditForm extends Component {
         this.state = {
             hidden: true
         }
-        this.toggleDisplay = this.toggleDisplay.bind(this);
+        this.toggleDisplay = this
+            .toggleDisplay
+            .bind(this);
     }
     toggleDisplay() {
         this.setState((prevState) => {
@@ -18,14 +21,21 @@ class EditForm extends Component {
     }
 
     render() {
-        let { hidden } = this.state;
-        let { editItem, index } = this.props;
-        let formStyle = { display: hidden ? "none" : "initial" }
+        let {hidden} = this.state;
+        let {editItem, index} = this.props;
+        let formStyle = {
+            display: hidden
+                ? "none"
+                : "initial"
+        }
+        let tooltip = <Tooltip id="tooltip">Click here to edit</Tooltip>
         return (
             <div>
-                <button onClick={this.toggleDisplay}>Edit</button>
+                <OverlayTrigger placement="bottom" overlay={tooltip}>
+                    <button onClick={this.toggleDisplay}>Edit</button>
+                </OverlayTrigger>
                 <div style={formStyle}>
-                    <Form submit={editItem}{...this.props}></Form>
+                    <Form {...this.props} submit={editItem}></Form>
                 </div>
             </div>
         )
