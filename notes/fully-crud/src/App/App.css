@@ -1,0 +1,18 @@
+* {
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+button {
+    margin: 50px 0;
+    padding: 20px 0;
+}
+
+.app-wrapper {
+    margin-left: 30px;
+    padding: 20px;   
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import MyNavbar from "./MyNavbar";
-
+import './Header.css';
 
 export default function Header(props) {
 
@@ -8,8 +8,7 @@ export default function Header(props) {
         {
             name: "Start Bootstrap",
             href: "#"
-        },
-        {
+        }, {
             name: "Home",
             href: "#"
         }, {
@@ -25,15 +24,22 @@ export default function Header(props) {
     ]
 
     return (
-        <section>
-            {links.map((link, i) =>{
-                return (
-                    <MyNavbar {...link} key={i}></MyNavbar>
-                )
-            })}
+        <section className="header">
+            <div className="overlay">
+            <div className="nav-wrapper">
+                {links.map((link, i) => {
+                    return (
+                        <MyNavbar {...link} key={i}></MyNavbar>
+                    )
+                })}
+            </div>
 
-            <h1>Clean Blog</h1>
-            <h2>A Blog Theme by Start Bootstrap</h2>
+            <div className="header-text">
+                <h1>Clean Blog</h1>
+                <h2>A Blog Theme by Start Bootstrap</h2>
+            </div>
+
+            </div>
             
         </section>
     )

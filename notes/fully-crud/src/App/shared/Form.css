@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 40%;
+    text-align: center;
+    
+}
+
+input:nth-last-child(1) {
+    margin-top: 50px;
+}
