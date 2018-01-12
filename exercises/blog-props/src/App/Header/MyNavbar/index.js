@@ -5,7 +5,7 @@ import './MyNavbar.css'
 export default function MyNavbar(props) {
     let { name, href } = props;
     return (
-        <div className="link-wrapper">
+        <div className="nav-link">
             <a href={href}>{name}</a> 
         </div>
         

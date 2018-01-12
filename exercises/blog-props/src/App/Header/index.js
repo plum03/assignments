@@ -26,21 +26,26 @@ export default function Header(props) {
     return (
         <section className="header">
             <div className="overlay">
-            <div className="nav-wrapper">
-                {links.map((link, i) => {
-                    return (
-                        <MyNavbar {...link} key={i}></MyNavbar>
-                    )
-                })}
+                <div className="nav-wrapper">
+                    <div className="brand">
+                        <MyNavbar></MyNavbar>
+                    </div>
+                    <div className="links">
+                        {links.map((link, i) => {
+                            return (
+                                <MyNavbar {...link} key={i}></MyNavbar>
+                            )
+                        })}
+                    </div>
+                </div>
+
+                <div className="header-text">
+                    <h1 className="head-title">Clean Blog</h1>
+                    <h2 className="head-sub">A Blog Theme by Start Bootstrap</h2>
+                </div>
+
             </div>
 
-            <div className="header-text">
-                <h1>Clean Blog</h1>
-                <h2>A Blog Theme by Start Bootstrap</h2>
-            </div>
-
-            </div>
-            
         </section>
     )
 }

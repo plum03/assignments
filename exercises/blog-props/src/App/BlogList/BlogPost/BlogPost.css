@@ -1,0 +1,21 @@
+.blog-post p {
+    font-style: italic;
+    font-family: 'Lora', serif;
+    color: darkgray;
+    font-size: 18px;    
+    padding-bottom: 10px;
+}
+
+.blog-post h1 {
+    font-weight: 800;
+}
+
+.blog-post h2 {
+    font-weight: lighter;
+}
+
+.blog-post {
+    border-bottom: 1px solid lightgray;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}

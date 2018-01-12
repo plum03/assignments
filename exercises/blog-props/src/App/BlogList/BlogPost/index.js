@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './BlogPost.css'
+
 export default function BlogPost (props) {
     let { title, subtitle, author, date } = props;
     return(

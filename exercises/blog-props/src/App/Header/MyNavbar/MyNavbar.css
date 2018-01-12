@@ -1,5 +1,18 @@
- a {
+.nav-link a {
     color: white;
+    font-size: 18px;
 
 }
+
+.nav-link {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
 

@@ -3,9 +3,9 @@
     background-size: cover;
     height: 532px;
     position: relative;
-    /* background-color: darkgray; */
     color: white;
     text-align: center;
+    background-position: 0 40%;
 
 }
 
@@ -32,5 +32,15 @@
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.55;
+    opacity: 0.5;
+}
+
+.head-title {
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.head-sub {
+    font-weight:light;
+    font-size: 24px;
 }
