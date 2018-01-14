@@ -1,8 +1,28 @@
 .blog-wrapper {
+    width: 50%;
+    padding-top: 50px;
+}
+
+
+.blog-post {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 50%;
-    padding-top: 50px;
+    border-bottom: 1px solid lightgray;
+}
+
+
+button {
+
+    padding: 15px 25px;
+    text-transform: uppercase;
+    background-color: #0085a1;
+    border-color: #0085a1;
+    color: white;
+    width: 25%;
+    margin-left: 75%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
 }
 

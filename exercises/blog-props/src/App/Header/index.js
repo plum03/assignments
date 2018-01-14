@@ -6,9 +6,6 @@ export default function Header(props) {
 
     let links = [
         {
-            name: "Start Bootstrap",
-            href: "#"
-        }, {
             name: "Home",
             href: "#"
         }, {
@@ -28,7 +25,7 @@ export default function Header(props) {
             <div className="overlay">
                 <div className="nav-wrapper">
                     <div className="brand">
-                        <MyNavbar></MyNavbar>
+                        <a href="/">Start Bootstrap</a>
                     </div>
                     <div className="links">
                         {links.map((link, i) => {

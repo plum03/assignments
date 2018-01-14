@@ -2,5 +2,35 @@
     height: 219px;
     text-align: center;
     border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
+}
+
+.copy p {
+    color: darkgray;
+    font-size: 14px;
+    font-family: 'Lora', serif;
+}
+
+.icons {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+
+.twt::before {
+    content: "\f111";
+    font-family: 'FontAwesome';
+}
+
+.fa::before {
+    content: "f"; 
+}
+
+.git::before {
+    content: "g";
 }
