@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Swedish Massage",
+        "price": 90,
+        "description": "Relaxing ... "
+    },
+    {
+        "name": "Hot Stone Massage",
+        "price": 110,
+        "description": "Hot stones ... "
+    },
+    {
+        "name": "Sugar Scrub",
+        "price": 65,
+        "description": "Polish away impurities and rough skin with our ..."
+    },
+    {
+        "name": "Seaweed Body Wrap",
+        "price": 130,
+        "description": "Eliminate toxins in the skin ... "
+    },
+    {
+        "name": "Shiatsu Massage",
+        "price": 90,
+        "description": "Deep tissue massage ..."
+    }
+]
