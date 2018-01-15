@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Superman",
+        "catchphrase": "Up up and away!",
+        "imgUrl": ""
+    },
+    {
+        "name": "Batman",
+        "catchphrase": "To the batmobile!",
+        "imgUrl": ""
+    },
+    {
+        "name": "Spider man",
+        "catchphrase": "This is a sticky situation!",
+        "imgUrl": ""
+    },
+    {
+        "name": "Ironman",
+        "catchphrase": "I need a catchphrase!",
+        "imgUrl": ""
+    }
+]
