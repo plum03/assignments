@@ -2,6 +2,7 @@
 import Box from './Box.js'
 import ContactCard from './ContactCard.js'
 import DisplayComponents from './DisplayComponents.js'
+import axios from 'axios'
 
 import React, { Component } from 'react'
 
@@ -9,22 +10,42 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isVisible: true
+            // isVisible: true,
+            todos: []
         }
-        this.handleClick = this.handleClick.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(e) {
-        // console.log("clicked");
-        this.setState((prevState) => {
-            return {
-                isVisible: !prevState.isVisible
-                // isVisible: prevState.isVisible ? false : true
-            }
-        })
+    // handleClick(e) {
+    //     // console.log("clicked");
+    //     this.setState((prevState) => {
+    //         return {
+    //             isVisible: !prevState.isVisible
+    //             // isVisible: prevState.isVisible ? false : true
+    //         }
+    //     })
+    // }
 
+
+    // POST Request w/ AXIOS
+    // componentDidMount() {
+    //     axios.post("https://api.vschool.io/bob/todo", {title: "Clear todo list"})
+        // POST requires both url, {new obj. info}
+        // DELETE & PUT require url w/ id_num, {new info}
+    // }
+// GET Request with AXIOS
+    componentDidMount() {
+        axios.get("https://api.vschool.io/bob/todo")
+            .then((response) => {
+                // console.log(response);
+                this.setState({
+                    todos: response.data
+                })
+            })
+            .catch((err) => {
+                console.error(err);
+            })
     }
-    componentDidMount
 
 // Useful in React Wars
     componentWillReceiveProps(nextProps) {
@@ -34,13 +55,18 @@ export default class App extends Component {
     }
 
     render() {
+
+        const todos = this.state.todos.map((todo) => {
+            return(<h2>{todo.title}</h2>)
+        });
         return (
             <div>
-                <DisplayComponents
+                {todos}
+                {/* <DisplayComponents
                     isVisible={this.state.isVisible}
                     count={this.state.count}
                     handleClick={this.state.handleClick}
-                    />
+                    /> */}
                 {/* <button onClick={this.handleClick}>
                     {this.setState.isVisible ? "Hide" : "Show"}
                 </button>
