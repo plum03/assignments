@@ -10,16 +10,22 @@ export default class App extends Component {
             catchphrase: ""
         }
         this.display = this.display.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     display(i) {
-        let index = i.target.index
-        this.setState((prevState, i) => {
+        alert(this.state.superheroes[i].catchphrase);
+    }
+
+    handleClick(e) {
+        
+        this.setState((prevState) => {
+            let i = e.target.index;
             return {
-                catchphrase: prevState.catchphrase === "" ? superheroes[i].catchphrase : ""
+                catchphrase: prevState.catchphrase === "" ? this.state.superheroes[i].catchphrase : ""
             }
         })
-        
+
     }
 
     render() {
@@ -28,7 +34,7 @@ export default class App extends Component {
             <div>
                 {superheroes.map((superhero, i) => {
                     return (
-                        <Superhero {...superhero} index={i} onClick={this.display}></Superhero>
+                        <Superhero name="hero" key={i + superhero.name} {...superhero} index={i} display={this.display} onClick={this.handleClick}></Superhero>
                     )
                 })}
             </div>
