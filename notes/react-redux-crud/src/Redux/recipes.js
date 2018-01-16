@@ -10,11 +10,17 @@ const recipesReducer = (prevRecipes = [], action) => {
                     return recipe;
                 }
             })
+        case 'REMOVE_RECIPE':
+            return [...prevRecipes].filter((recipe, i) => {
+                return i !== action.index;
+                // returns all items of the array where array item index does not match index provided
+            })
         default:
             return prevRecipes
     }
 }
 
+//action creators
 export const addRecipe = (recipe) => {
     // returns an action object with a type (ADD_RECIPE) and a payload (recipe)
     return {
@@ -30,6 +36,13 @@ export const editRecipe = (updatedRecipe, index) => {
         index
     }
 } 
+
+export const removeRecipe = (index) => {
+    return {
+        type: "REMOVE_RECIPE",
+        index
+    }
+}
 
 export default recipesReducer;
 

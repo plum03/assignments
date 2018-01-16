@@ -8,10 +8,7 @@ import {addRecipe, editRecipe} from '../Redux/recipes'
 class Form extends Component {
     constructor(props) {
         super(props);
-        var name, category, cookTime;
-        if (props.index) {
-            var {name, category, cookTime} = props.recipes[props.index];
-        }
+        let  {name, category, cookTime} = props;
         
         this.state = {
             inputs: {
@@ -80,8 +77,4 @@ class Form extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {recipes: state.recipes}
-}
-
-export default connect(mapStateToProps, {addRecipe, editRecipe})(Form)
+export default connect(null, {addRecipe, editRecipe})(Form)
