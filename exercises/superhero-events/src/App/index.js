@@ -6,17 +6,24 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            superheroes: superheroes
+            superheroes: superheroes,
+            catchphrase: ""
         }
         this.display = this.display.bind(this);
     }
 
     display(i) {
-        alert(this.state.superheroes[i].catchphrase)
+        let index = i.target.index
+        this.setState((prevState, i) => {
+            return {
+                catchphrase: prevState.catchphrase === "" ? superheroes[i].catchphrase : ""
+            }
+        })
+        
     }
 
     render() {
-        let {superheroes} = this.state;
+        let {superheroes, catchphrase} = this.state;
         return (
             <div>
                 {superheroes.map((superhero, i) => {
