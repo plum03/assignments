@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function Superhero(props) {
-    return (
-        <div className="superhero" >
-            <h1 onClick={() => handleClick(props.index)}>{props.name}</h1>
-            
+export default class Superhero extends Component {
+    constructor(props) {
+        super(props);
+        this.superhero = {...props};
+        this.handleClick = this.handleClick.bind(this)
+    }
 
-        </div>
-    )
+    handleClick() {
+        this.superhero.displayCatchphrase(this.superhero.catchphrase)
+    }
+
+
+    render() {
+
+        return (
+            <div>
+                <h1 onClick={this.handleClick}>{this.superhero.name}</h1>
+            </div>
+        )
+    } 
 }
-
-export default Superhero
