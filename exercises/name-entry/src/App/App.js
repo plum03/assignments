@@ -39,7 +39,7 @@ export default class App extends Component {
                 <button onClick={this.handleSubmit} >Add Name</button>
                 <ol>
                     {names.map((name, i) => {
-                        return <List {...name}></List>
+                        return <List name={name} index = {i + name}></List>
                     })}
                 </ol>
             </div>
