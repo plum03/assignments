@@ -26,7 +26,22 @@ app.get("/myserver", (request, response) => {
 });
 
 app.get("/db", (req, res) => {
-    res.send(db)
+    // console.log(req.query);
+    // assign variable (e.g. query) to the req.query object (to be used in for-in loop below)
+    let query = req.query;
+    let filteredDb = db.filter((dbItem) => {
+        let found = true;
+        // for-in loop
+        for (let key in query) { 
+            // use single = here to avoid query issues with string/number data types not matching, false negative
+            if(dbItem[key] != query[key]) {
+                found = false;
+                break;
+            }
+        }
+        return found
+    })
+    res.send(filteredDb)
 });
 
 app.get("/db/:id", (req, res) => {

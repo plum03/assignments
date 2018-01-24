@@ -2,28 +2,28 @@ import axios from 'axios'
 
 import React from 'react'
 
-const catUrl = "https://qriusity.com/v1/categories"
+const catUrl = "https://qriusity.com/v1/categories/?name="
 
-export function getCategories() {
+export function getCategory(category) {
     return dispatch => {
         axios
-            .get(catUrl)
+            .get(catUrl + category)
             .then((response) => {
                 let results = response.data;
                 dispatch({
                     type: "GET_CATEGORIES",
-                    categories: results
+                    category: results
                 })
             })
     }
 
 }
 
-export default function catReducer(prevState = {}, action) {
+export default function catReducer(prevState = [], action) {
     switch(action.type) {
-        case "GET_CATEGORIES":
+        case "GET_CATEGORY":
             return {
-                categories: action.categories
+                category: action.category
             }
         default:
             return prevState

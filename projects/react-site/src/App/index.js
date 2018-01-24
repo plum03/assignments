@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Categories from './Categories'
-import Category from './Categories/Category'
+import Category from './Category'
+
 import TriviaList from './TriviaList'
 import Question from './Question'
 
@@ -9,9 +9,12 @@ import Question from './Question'
 function App(props) {
     return (
         <div>
-            <Categories></Categories>
+            <Category></Category>
             {/* <TriviaList></TriviaList>
             <Question></Question> */}
+            {/* <Switch>
+                    Route path="/trivia/:category" component=Category
+                </Switch> */}
         </div>
     )
 }
