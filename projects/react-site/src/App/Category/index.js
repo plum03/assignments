@@ -4,34 +4,39 @@ import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import {getCategory} from '../../redux/category'
+import { getQuestions } from '../../redux/question'
+
+let categoryArr = ["Animated Movies", "Biology", "Random Trivia", "TV Trivia", "Who Sings It (2000)", "Vampire"];
 
 
 class Category extends Component {
     constructor(props) {
         super(props);
-        // this.state = {     categories: props.categories || [] }
+        this.state = {
+            loading: true
+        }
     }
 
-    componentDidMount() {
-        this
-            .props
-            .getCategory();
+    componentDidMount() {  
+        categoryArr.map((catName) => {
+            this.props.getCategory(catName)
+        })
+        
     }
 
     componentWillReceiveProps(nextProps) {
-        // if (this.state.categories.length !== nextProps.categories.length) {
-        // this.setState( {         categories: nextProps.categories     }) }
+        if (this.props.category.length !== nextProps.category.length) {
+            this.setState( {         category: nextProps.category     }) }
     }
 
+
+   
     render() {
-        // let categories = this.state.categories
-        let categories = ["Animated Movies", "Biology", "Random Trivia", "TV Trivia", "Who Sings It (2000)", "Vampire"];
-        console.log(categories);
         
         return (
             // map through the categories array and create <Link to="/trivia/{category}/">
             <div>
-                {categories.map((category, i) => {
+                {categoryArr.map((category, i) => {
                     return (
                         <Link to={`/${category}`} key={i + category}>{category}</Link>
                     )
@@ -42,7 +47,8 @@ class Category extends Component {
 }
 
 function mapStateToProps(state) {
-    return state.categories
+    return {category: state.category}
 }
+
 
 export default connect(mapStateToProps, {getCategory})(Category)

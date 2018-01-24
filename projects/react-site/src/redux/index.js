@@ -2,10 +2,11 @@ import {createStore, combineReducers, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 
 import category from './category'
-import question from './question'
+import questions from './question'
 
 
-const rootReducer = combineReducers({ category, question })
+const rootReducer = combineReducers({ category, questions })
+
 
 export default createStore(
     rootReducer, 

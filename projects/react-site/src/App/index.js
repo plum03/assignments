@@ -1,7 +1,8 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Category from './Category'
+import Navbar from './Nav'
+// import Category from './Category'
 import Questions from './Questions'
 import Question from './Questions/Question'
 import Home from './Home'
@@ -10,15 +11,12 @@ import Home from './Home'
 function App(props) {
     return (
         <div>
-            <Category></Category>
+            <Navbar></Navbar>
             <Switch>
                 <Route exact path ="/" component={Home} />
-                <Route path={`/category`} component={Questions} />
-                <Route path={`/category`} component={Question} />
+                <Route path="/:categoryId" component={Questions} />
             </Switch>
-            {/* <Switch>
-                    Route path="/trivia/:category" component=Category
-                </Switch> */}
+           
         </div>
     )
 }
