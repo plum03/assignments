@@ -1,5 +1,4 @@
 import axios from 'axios'
-
 import React from 'react'
 
 const catUrl = "https://qriusity.com/v1/categories/?name="
@@ -19,13 +18,13 @@ export function getCategory(category) {
 
 }
 
-export default function catReducer(prevState = [], action) {
+export default function catReducer(category = [], action) {
     switch(action.type) {
         case "GET_CATEGORY":
             return {
                 category: action.category
             }
         default:
-            return prevState
+            return category
     }
 }

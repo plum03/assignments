@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import {getCategory} from '../../redux/category'
 
-import Category from './Category'
 
 class Category extends Component {
     constructor(props) {
@@ -25,27 +25,24 @@ class Category extends Component {
 
     render() {
         // let categories = this.state.categories
-        let categories = ["science", "bible", "sports"];
+        let categories = ["Animated Movies", "Biology", "Random Trivia", "TV Trivia", "Who Sings It (2000)", "Vampire"];
         console.log(categories);
+        
         return (
+            // map through the categories array and create <Link to="/trivia/{category}/">
             <div>
-                {/* map through the categories array and create <Link to="/trivia/{category}/">  */}
+                {categories.map((category, i) => {
+                    return (
+                        <Link to={`/${category}`} key={i + category}>{category}</Link>
+                    )
+                })}               
             </div>
         )
     }
-    /* <div>
-                {categories.map((category, i) => {
-                    let {name, id} = category;
-                    return (
-                    <Category key={i + name} name={name} id={id}></Category>
-                )})}
-
-            </div>  */
-
 }
 
 function mapStateToProps(state) {
     return state.categories
 }
 
-export default connect(mapStateToProps, {getCategories})(Categories)
+export default connect(mapStateToProps, {getCategory})(Category)
