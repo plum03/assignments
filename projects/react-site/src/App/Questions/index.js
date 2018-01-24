@@ -32,7 +32,7 @@ class Questions extends Component {
         console.log(questions)
         console.log(loading)
         return (
-            !loading ?
+            loading ?
             <div>
                 {questions.map((question, i) => {
                     return (
