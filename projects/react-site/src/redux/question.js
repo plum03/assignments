@@ -12,18 +12,17 @@ export function getQuestions(catId) {
                 type: "GET_QUESTIONS",
                 questions: response.data
             })
-            // console.log(response.data)
+            console.log(response.data)
         })
     }
 }
 
-export default function questReducer(questions = {}, action) {
+export default function questReducer(questions = [], action) {
     switch(action.type) {
         case "GET_QUESTIONS":
-            return {
-                questions: action.questions
-            }
+            return action.questions
         default:
             return questions
     }
 }
+

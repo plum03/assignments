@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
+
+import Question from './Question'
 
 import {getQuestions} from '../../redux/question'
 
@@ -16,42 +18,47 @@ class Questions extends Component {
     componentDidMount() {
         let catId = this.props.match.params.categoryId
         this.props.getQuestions(catId)
-        console.log(catId)
+        // console.log(catId)
     }
 
-    componentWillReceiveProps() {
-       this.setState = {
-           loading: false
-       }
-       
+    componentWillReceiveProps(nextProps) {
+        
+        this.setState = {
+            loading: false
+        }
+    }
+
+    componentWillUnmount() {
+        this.setState = {
+            loading: true
+        }
     }
 
     render() {
         let {loading} = this.state
-        let {questions} = this.props.questions
+        let {questions} = this.props
+        // console.log(this.props)
         console.log(questions)
-        console.log(loading)
+        // const myQ = questions.questions
+        // console.log(loading)
+        
+            const questionList = questions.map((question, i) => {
+                return <Question {...question} question={question.question} option1={question.option1} />
+            });
+        
+        
+
         return (
-            loading ?
             <div>
-                {questions.map((question, i) => {
-                    return (
-                        <Link to=""{...question}></Link>
-                    )
-                    
-                })}
-                
+                {questionList}
+                <p>hi</p>
             </div>
-            :
-            <div>Please wait ... your trivia questions are loading</div>
-        )      
+        )
     }
 }
 
 const mapStateToProps = (state) => {
-    return {
-        questions: state.questions
-    }
+    return {questions: state.questions}
 }
 
 export default connect(mapStateToProps, {getQuestions})(Questions)
