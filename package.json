@@ -1,0 +1,29 @@
+{
+  "name": "assignments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "express": "^4.16.2",
+    "jshint": "^2.9.5",
+    "redux": "^3.7.2",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plum03/assignments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plum03/assignments/issues"
+  },
+  "homepage": "https://github.com/plum03/assignments#readme"
+}
