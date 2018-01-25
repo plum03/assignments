@@ -16,22 +16,22 @@ class Questions extends Component {
     }
 
     componentDidMount() {
-        let catId = this.props.match.params.categoryId
-        this.props.getQuestions(catId)
+        window.addEventListener("click", (e) => {
+            let catId = this.props.match.params.categoryId
+            this.props.getQuestions(catId)
+            })
+        
         // console.log(catId)
     }
 
     componentWillReceiveProps(nextProps) {
-        
         this.setState = {
             loading: false
         }
     }
 
     componentWillUnmount() {
-        this.setState = {
-            loading: true
-        }
+       window.removeEventListener("click")
     }
 
     render() {
@@ -43,7 +43,7 @@ class Questions extends Component {
         // console.log(loading)
         
             const questionList = questions.map((question, i) => {
-                return <Question {...question} question={question.question} option1={question.option1} />
+                return <Question onClick={this.componentDidMount} {...question} question={question.question} option1={question.option1} />
             });
         
         
