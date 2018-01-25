@@ -1,59 +1,47 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {Link, Switch, Route} from 'react-router-dom'
 
 import Question from './Question'
 
 import {getQuestions} from '../../redux/question'
 
 class Questions extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            loading: true
-        }
-    }
 
     componentDidMount() {
-        window.addEventListener("click", (e) => {
-            let catId = this.props.match.params.categoryId
-            this.props.getQuestions(catId)
-            })
-        
-        // console.log(catId)
+        let catId = this.props.match.params.categoryId;
+        this
+            .props
+            .getQuestions(catId);
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState = {
-            loading: false
+        let {categoryId} = this.props.match.params;
+        let nextCatId = nextProps.match.params.categoryId;
+        if (categoryId !== nextCatId) 
+            this.props.getQuestions(nextCatId);
         }
-    }
-
-    componentWillUnmount() {
-       window.removeEventListener("click")
-    }
-
+    
     render() {
-        let {loading} = this.state
-        let {questions} = this.props
-        // console.log(this.props)
-        console.log(questions)
-        // const myQ = questions.questions
-        // console.log(loading)
-        
-            const questionList = questions.map((question, i) => {
-                return <Question onClick={this.componentDidMount} {...question} question={question.question} option1={question.option1} />
-            });
-        
-        
+        let {loading, data} = this.props.questions;
+        // console.log(this.props) const myQ = questions.questions console.log(loading)
 
-        return (
-            <div>
+        const questionList = data.map((question, i) => {
+            let {categoryId} = this.props.match.params;
+            return <Link key={question.id} to={`/${categoryId}/${question.id}`}>{question.question}</Link>
+        });
+
+        return (loading
+            ? <div>
+                    ...Loading
+                </div>
+            : <div>
                 {questionList}
-                <p>hi</p>
-            </div>
-        )
+                <Switch>
+                    <Route path="/:categoryId/:questionId" component={Question}></Route>
+                </Switch>
+            </div>)
     }
 }
 

@@ -1,8 +1,4 @@
 import axios from 'axios'
-import React from 'react'
-import {store} from 'react'
-
-
 
 const catUrl = "https://qriusity.com/v1/categories/search?name="
 
