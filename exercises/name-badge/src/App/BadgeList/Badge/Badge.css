@@ -1,0 +1,17 @@
+.badge-wrapper {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.badge-banner {
+    /* background-color: gray; */
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    height: 50px;
+    padding-left: 3%;
+}

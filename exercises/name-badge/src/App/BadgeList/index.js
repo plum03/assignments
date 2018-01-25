@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+import Form from '../Form'
+import Badge from './Badge/index';
+
+
 export default class BadgeList extends Component {
     constructor(props) {
         super(props);
@@ -13,7 +17,7 @@ export default class BadgeList extends Component {
     submitForm(newBadge) {
         this.setState(prevState => {
             let { badges, badgeColor } = prevState;
-            let color = badgeColor === 'red' ? 'blue' : 'red'
+            let color = badgeColor === 'lime' ? 'rebeccapurple' : 'lime'
             return {
                 badges: [...badges, newBadge],
                 badgeColor: color
