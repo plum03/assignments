@@ -65,7 +65,7 @@ export default class Form extends Component {
         if (!(/^\d+$/g.test(phone)) || phone.length !== 10) {
                 alert('Not a valid phone number. \n\nPlease enter a 10-digit number without letters or special characters. \n\nEx: 8018523384');
         } else {
-            this.state.submit(this.state.inputs);
+            this.setState({submit:this.state.inputs});
             this.clearInputs();
         }
         
