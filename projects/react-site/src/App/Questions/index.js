@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {Link, Switch, Route} from 'react-router-dom'
 
 import Question from './Question'
+import './Questions.css'
 
 import {getQuestions} from '../../redux/question'
 
@@ -24,6 +25,16 @@ class Questions extends Component {
         }
     
     render() {
+
+        let style = {
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            width: "33.33%",
+            backgroundColor: "azure",
+            fontSize: "22px"
+        }
+
         let {loading, data} = this.props.questions;
         // console.log(this.props) const myQ = questions.questions console.log(loading)
 
@@ -36,11 +47,18 @@ class Questions extends Component {
             ? <div>
                     ...Loading
                 </div>
-            : <div>
-                {questionList}
-                <Switch>
-                    <Route path="/:categoryId/:questionId" component={Question}></Route>
-                </Switch>
+            : <div className="main-wrapper">
+                <div className="list-wrapper" style={style}>
+                    {questionList}
+                </div>
+                <div className="question-wrapper">
+                    <Switch>
+                        <Route
+                            className="questions"
+                            path="/:categoryId/:questionId"
+                            component={Question}></Route>
+                    </Switch>
+                </div>
             </div>)
     }
 }

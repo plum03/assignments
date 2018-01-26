@@ -9,8 +9,12 @@ import Home from './Home'
 
 
 function App(props) {
+
+    let style = {
+        fontFamily: "Quicksand"
+    }
     return (
-        <div>
+        <div className='app-wrapper' style={style}>
             <Navbar></Navbar>
             <Switch>
                 <Route exact path ="/" component={Home} />
