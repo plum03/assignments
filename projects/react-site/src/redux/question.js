@@ -10,7 +10,7 @@ export function getQuestions(catId) {
             .then((response) => {
                 dispatch({type: "GET_QUESTIONS", questions: response.data})
             })
-    }
+    } 
 }
 
 export default function questReducer(questions = {loading: true, data: []}, action) {

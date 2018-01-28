@@ -17,5 +17,6 @@ function Recipes(props) {
 
 const mapStateToProps = (state) => {
     return {recipes: state.recipes}
+    
 }
 export default connect(mapStateToProps, {})(Recipes) ;

@@ -13,6 +13,7 @@ function App(props) {
     let style = {
         fontFamily: "Quicksand"
     }
+    
     return (
         <div className='app-wrapper' style={style}>
             <Navbar></Navbar>

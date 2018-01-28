@@ -23,6 +23,7 @@ class App extends Component {
     // Create Method to handle click event in render()
     handleClick(e) {
         let name = e.target.name;
+        console.log(e.target)
         this.setState((prevState) => {
             // add more logic here if needed
             return {

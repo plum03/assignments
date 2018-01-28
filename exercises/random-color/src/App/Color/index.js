@@ -20,10 +20,10 @@ export default class Color extends Component {
     getColor(){
         axios.get(colorUrl)
             .then((response) => {
-                console.log(response.data)
-                console.log(response.data.new_color)
+                // console.log(response.data)
+                // console.log(response.data.new_color)
                 let newColor = response.data.new_color
-                console.log(newColor)
+                // console.log(newColor)
                 this.setState({
                     backgroundColor: newColor
                 })
