@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'Rammetto One', cursive;
+}
+
+.box {
+    /* height: 50px; */
+    width: 100px;
+
+}
+
+.letter{
+    font-size: 80px;
+    text-align: center;
+    margin: 0px;
+}
+
+.t {
+    background-color: rgb(180, 180, 253);
+}
+
+.r {
+    background-color: lightgreen;
+}
+
+.i {
+    background-color: palevioletred;
+}
+
+.v {
+    background-color: cyan;
+}
+
+.a {
+    background-color: lightsalmon;
+}

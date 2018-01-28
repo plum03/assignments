@@ -17,7 +17,7 @@ function Navbar() {
         justifyContent: "space-around",
         backgroundColor: "whitesmoke",
         fontSize: "22px",
-        padding: "3%",
+        padding: "2%",
         alignItems: "center",
         fontWeight: "700",
         marginBottom: "2%"

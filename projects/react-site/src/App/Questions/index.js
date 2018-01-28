@@ -36,8 +36,8 @@ class Questions extends Component {
         }
 
         let {loading, data} = this.props.questions;
-        // console.log(this.props) const myQ = questions.questions console.log(loading)
-
+        // console.log(this.props) const myQ = questions.questions 
+        console.log(this.props.questions.data)
         const questionList = data.map((question, i) => {
             let {categoryId} = this.props.match.params;
             return <Link key={question.id} to={`/${categoryId}/${question.id}`}>{question.question}</Link>
@@ -49,6 +49,7 @@ class Questions extends Component {
                 </div>
             : <div className="main-wrapper">
                 <div className="list-wrapper" style={style}>
+                    <h2>{}</h2>
                     {questionList}
                 </div>
                 <div className="question-wrapper">

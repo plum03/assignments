@@ -8,16 +8,10 @@ class Question extends Component {
         super(props);
         this.state = {
             question: {},
-            toggleAlert: false,
             alertMsg: ""
         }
         this.handleClick = this.handleClick.bind(this)
-        this.displayMsg = this.displayMsg.bind(this)
     }
-
-    displayMsg() {
-        console.log("Need to fix this")
-     }
 
     handleClick(e) {
         let { value } = e.target
@@ -26,14 +20,11 @@ class Question extends Component {
 
         this.setState(() => {
             return {
-                toggleAlert: currentQ.answers.toString() === value ? true : false,
-                alertMsg: currentQ.answers.toString() === value ? "Correct" : "Try again"
-            }
-        })
-        this.displayMsg()
+                // toggleAlert: currentQ.answers.toString() === value ? true : false,
+                alertMsg: currentQ.answers.toString() === value ? "Correct" : "Try again",
+            } 
+        })      
     }
-
-  
 
     componentDidMount() {}
     render() {
@@ -56,8 +47,8 @@ class Question extends Component {
                         <option onClick={this.handleClick} value="3">{currentQ.option3}</option>
                         <option onClick={this.handleClick} value="4">{currentQ.option4}</option>
                     </li>
-
                 </ul>
+                <h3>{this.state.alertMsg}</h3>
             </div>)
     }
 }
