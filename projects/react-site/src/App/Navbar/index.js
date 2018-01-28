@@ -31,10 +31,10 @@ function Navbar() {
 
     return (
         <div className="category-wrapper" >
-        <div style={style}>
+        <div className="nav" style={style}>
             {categories.map((category, i) => {
                     return (
-                        <Link to={`/${category.id}`} key={category.id} style={linkStyle} >{category.name}</Link>
+                        <Link to={`/${category.id}`} key={category.id} className="cat-link" style={linkStyle} >{category.name}</Link>
                     )
                 })}
         </div>

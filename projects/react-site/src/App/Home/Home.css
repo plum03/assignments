@@ -6,9 +6,12 @@
     font-family: 'Rammetto One', cursive;
 }
 
-.box {
-    /* height: 50px; */
-    width: 100px;
+.letter-box {
+
+    width: 250px;
+    border-radius: 100px;
+    color: white;
+
 
 }
 
@@ -27,7 +30,7 @@
 }
 
 .i {
-    background-color: palevioletred;
+    background-color: #fe2feb;
 }
 
 .v {

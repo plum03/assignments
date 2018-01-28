@@ -10,7 +10,7 @@
     padding-bottom: 4%;
 }
 
-.options {
+/* .options {
     display: flex-wrap;
     flex-direction: row;
     margin: 0 auto;
@@ -23,5 +23,25 @@
     width: 50%;
     display: inline-flex;
     justify-content: space-between;
+} */
+
+.answer-option {
+    margin-bottom: 15px;
+    font-size: 20px;
+    padding: 5px;
+    transition: border linear .5s;
 }
 
+.answer-option:hover {
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.answer-option:target {
+    border: black 1px;
+}
+
+#answer-message {
+    padding-left: 45px;
+}

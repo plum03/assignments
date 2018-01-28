@@ -42,13 +42,13 @@ class Question extends Component {
                 <ul className="question" style={{listStyle: "none"}}>
                     <h2>{currentQ.question}</h2>
                     <li className="options">
-                        <option onClick={this.handleClick} value="1">{currentQ.option1}</option>
-                        <option onClick={this.handleClick} value="2">{currentQ.option2}</option>
-                        <option onClick={this.handleClick} value="3">{currentQ.option3}</option>
-                        <option onClick={this.handleClick} value="4">{currentQ.option4}</option>
+                        <option className="answer-option" onClick={this.handleClick} value="1">{currentQ.option1}</option>
+                        <option className="answer-option" onClick={this.handleClick} value="2">{currentQ.option2}</option>
+                        <option className="answer-option" onClick={this.handleClick} value="3">{currentQ.option3}</option>
+                        <option className="answer-option" onClick={this.handleClick} value="4">{currentQ.option4}</option>
                     </li>
                 </ul>
-                <h3>{this.state.alertMsg}</h3>
+                <h3 id="answer-message">{this.state.alertMsg}</h3>
             </div>)
     }
 }

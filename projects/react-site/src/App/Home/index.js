@@ -6,22 +6,22 @@ function Home() {
     return (
          <div className="head-wrapper">
          <div className="header">
-             <div className="box t">
+             <div className="letter-box t">
                  <p className="letter">T</p>
              </div>
-             <div className="box r">
+             <div className="letter-box r">
                  <p className="letter">R</p>
              </div>
-             <div className="box i">
+             <div className="letter-box i">
                  <p className="letter">I</p>
              </div>
-             <div className="box v">
+             <div className="letter-box v">
                  <p className="letter">V</p>
              </div>
-             <div className="box i">
+             <div className="letter-box i">
                  <p className="letter">I</p>
              </div>
-             <div className="box a">
+             <div className="letter-box a">
                  <p className="letter">A</p>
              </div>
          </div>
