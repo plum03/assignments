@@ -1,45 +1,79 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import "./Nav.css"
+import {Nav, Navbar, NavItem} from "react-bootstrap"
 
-function Navbar() {
+function myNavbar() {
 
     let categories = [
-        {name:"Animated Movies", id:"2"}, 
-       {name: "Biology", id:"8"}, 
-        {name: "Random Trivia", id:"24"}, 
-        {name: "TV Trivia", id:"25"}, 
-        {name: "Who Sings It (2000)", id:"35"}, 
-        {name: "Vampire", id:"32"}
+        {
+            name: "Animated Movies",
+            id: "2"
+        }, {
+            name: "Biology",
+            id: "8"
+        }, {
+            name: "Random Trivia",
+            id: "24"
+        }, {
+            name: "TV Trivia",
+            id: "25"
+        }, {
+            name: "Who Sings It (2000)",
+            id: "35"
+        }, {
+            name: "Vampire",
+            id: "32"
+        }
     ];
-
-    let style = {
-        display: "flex",
-        justifyContent: "space-around",
-        backgroundColor: "whitesmoke",
-        fontSize: "22px",
-        padding: "2%",
-        alignItems: "center",
-        fontWeight: "700",
-        marginBottom: "2%"
-        
-
-    }
 
     let linkStyle = {
         textDecoration: "none"
     }
 
     return (
-        <div className="category-wrapper" >
-        <div className="nav" style={style}>
-            {categories.map((category, i) => {
+        <div className="category-wrapper">
+                {/* React Bootstrap Navbar */}
+                {/* <Navbar inverse collapseOnSelect>
+                    <Navbar.Header>
+                        <Navbar.Brand>
+                            <a href="#brand">React-Bootstrap</a>
+                        </Navbar.Brand>
+                        <Navbar.Toggle/>
+                    </Navbar.Header>
+                    <Navbar.Collapse>
+                        <Nav>
+                        {categories.map((category, i) => {
                     return (
-                        <Link to={`/${category.id}`} key={category.id} className="cat-link" style={linkStyle} >{category.name}</Link>
+                        <NavItem eventKey={i}>
+                            <Link
+                                to={`/${category.id}`}
+                                key={category.id}
+                                className="cat-link"
+                                style={linkStyle}>{category.name}</Link>
+                        </NavItem>
                     )
                 })}
-        </div>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar> */}
+
+
+            <div className="nav">
+                {categories.map((category, i) => {
+                    return (
+                        <NavItem eventKey={i}>
+                            <Link
+                                to={`/${category.id}`}
+                                key={category.id}
+                                className="cat-link"
+                                style={linkStyle}>{category.name}</Link>
+                        </NavItem>
+                    )
+                })}
+            </div>
         </div>
     )
 }
 
-export default Navbar
+export default myNavbar

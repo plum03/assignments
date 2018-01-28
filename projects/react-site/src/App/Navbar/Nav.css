@@ -10,4 +10,23 @@
     margin-bottom: 2%;
 }
 
+.nav-links {
+
+    list-style: none;
+    padding: 20px;
+    float: left;
+}
+
+@media only screen and (max-width: 770px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav > li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
 
