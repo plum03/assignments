@@ -9,6 +9,14 @@ import './Questions.css'
 import {getQuestions} from '../../redux/question'
 
 class Questions extends Component {
+    constructor() {
+        super();
+        this.state = {
+            showBig: true,
+            showSmall: false
+        }
+        this.handleChange = this.handleChange.bind(this);
+    }
 
     componentDidMount() {
         let catId = this.props.match.params.categoryId;
@@ -23,6 +31,10 @@ class Questions extends Component {
         if (categoryId !== nextCatId) 
             this.props.getQuestions(nextCatId);
         }
+
+    handleChange(e) {
+        this.props.history.push(e.target.value)
+    }
     
     render() {
 
@@ -43,14 +55,48 @@ class Questions extends Component {
             return <Link key={question.id} to={`/${categoryId}/${question.id}`}>{question.question}</Link>
         });
 
+        const questionList2 = data.map((question, i) => {
+            let {categoryId} = this.props.match.params;
+            return <option value={`/${categoryId}/${question.id}`}><Link key={question.id} to={`/${categoryId}/${question.id}`}>{question.question}</Link></option>
+        });
+
+        // const  questionList2 = data.map((question,i) => {
+        //     let {categoryId} = this.props.match.params;
+        //     return <option value={`/${categoryId}/${question.id}`} key={i}><Link key={question.id} to={`/${categoryId}/${question.id}`>{question.question}</Link></option>
+        // });
+
+
+            // This is causing an infinite loop, need to find another way to trigger the setState
+            // window.addEventListener("resize", ()=> {
+            //     if(window.outerWidth < 770) {
+            //         this.setState({
+            //             showBig: false,
+            //             showSmall: true
+            //         })
+            //     }
+    
+            //     if(window.outerWidth > 770) {
+            //         this.setState({
+            //             showBig: true,
+            //             showSmall: false
+            //         })
+            //     }
+            // });
+    
+        
+        
+
         return (loading
             ? <div>
                     ...Loading
                 </div>
             : <div className="main-wrapper">
-                <div className="list-wrapper" style={style}>
-                    <h2>{}</h2>
-                    {questionList}
+                <div >
+                   
+                    {this.state.showBig && <div className="list-wrapper">{questionList}</div>}
+                    {this.state.showSmall && <select className="answer-dropdown" onChange={this.handleChange}>
+                        {questionList2}
+                        </select>}
                 </div>
                 <div className="question-wrapper">
                     <Switch>
