@@ -60,11 +60,6 @@ class Questions extends Component {
             return <option value={`/${categoryId}/${question.id}`}><Link key={question.id} to={`/${categoryId}/${question.id}`}>{question.question}</Link></option>
         });
 
-        // const  questionList2 = data.map((question,i) => {
-        //     let {categoryId} = this.props.match.params;
-        //     return <option value={`/${categoryId}/${question.id}`} key={i}><Link key={question.id} to={`/${categoryId}/${question.id}`>{question.question}</Link></option>
-        // });
-
 
             // This is causing an infinite loop, need to find another way to trigger the setState
             // window.addEventListener("resize", ()=> {

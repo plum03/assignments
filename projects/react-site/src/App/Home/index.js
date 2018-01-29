@@ -18,7 +18,7 @@ function Home() {
              <div className="letter-box v">
                  <p className="letter">V</p>
              </div>
-             <div className="letter-box i">
+             <div className="letter-box ia">
                  <p className="letter">I</p>
              </div>
              <div className="letter-box a">

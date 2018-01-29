@@ -4,13 +4,22 @@
     width: 60%;
     margin: 0 auto;
     font-family: 'Rammetto One', cursive;
+    
+}
+
+.head-wrapper {
+    min-height: 600px;
+    background-color: whitesmoke;
 }
 
 .letter-box {
-
-    width: 250px;
-    border-radius: 100px;
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 }
@@ -22,21 +31,25 @@
 }
 
 .t {
-    background-color: rgb(180, 180, 253);
+    background-color: rgb(110, 108, 243);
 }
 
 .r {
-    background-color: lightgreen;
-}
-
-.i {
-    background-color: #fe2feb;
-}
-
-.v {
     background-color: cyan;
 }
 
+.i {
+    background-color: #fc52f3;
+}
+
+.v {
+    background-color: lime;
+}
+
+.ia {
+    background-color: #f8b524;
+}
+
 .a {
-    background-color: lightsalmon;
+    background-color: rgb(173, 122, 255);
 }
