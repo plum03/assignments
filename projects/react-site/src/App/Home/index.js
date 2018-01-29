@@ -4,8 +4,8 @@ import './Home.css'
 
 function Home() {
     return (
-         <div className="head-wrapper">
-         <div className="header">
+         <div className="page-wrapper">
+         <div className="title">
              <div className="letter-box t">
                  <p className="letter">T</p>
              </div>

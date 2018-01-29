@@ -1,13 +1,19 @@
 .question-wrapper {
-    padding-left: 3%;
+    padding-left: 2%;
     display: inline-flex;
-    width: 66%;
+    /* width: 66%; */
+    margin-top: 50px;
 }
 
 .question h2::before {
     content: "Question: ";
     display: block;
     padding-bottom: 4%;
+    font-size: 28px;
+}
+
+.question h2 {
+    padding-bottom: 3%;
 }
 
 /* .options {
@@ -29,13 +35,14 @@
     margin-bottom: 15px;
     font-size: 20px;
     padding: 5px;
-    transition: border linear .5s;
+    width: 50%;
 }
 
 .answer-option:hover {
-    background: blue;
+    background: rgb(20, 146, 230);
     color: white;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .answer-option:target {
