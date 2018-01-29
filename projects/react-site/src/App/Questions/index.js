@@ -12,10 +12,10 @@ class Questions extends Component {
     constructor() {
         super();
         this.state = {
-            showBig: true,
-            showSmall: false
+            // showBig: true,
+            // showSmall: false
         }
-        this.handleChange = this.handleChange.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount() {
@@ -55,10 +55,10 @@ class Questions extends Component {
             return <Link key={question.id} to={`/${categoryId}/${question.id}`}>{question.question}</Link>
         });
 
-        const questionList2 = data.map((question, i) => {
-            let {categoryId} = this.props.match.params;
-            return <option value={`/${categoryId}/${question.id}`}><Link key={question.id} to={`/${categoryId}/${question.id}`}>{question.question}</Link></option>
-        });
+        // const questionList2 = data.map((question, i) => {
+        //     let {categoryId} = this.props.match.params;
+        //     return <option value={`/${categoryId}/${question.id}`}><Link key={question.id} to={`/${categoryId}/${question.id}`}>{question.question}</Link></option>
+        // });
 
 
             // This is causing an infinite loop, need to find another way to trigger the setState
@@ -88,10 +88,10 @@ class Questions extends Component {
             : <div className="main-wrapper">
                 <div >
                    
-                    {this.state.showBig && <div className="list-wrapper">{questionList}</div>}
-                    {this.state.showSmall && <select className="answer-dropdown" onChange={this.handleChange}>
+                    <div className="list-wrapper">{questionList}</div>
+                    {/* {this.state.showSmall && <select className="answer-dropdown" onChange={this.handleChange}>
                         {questionList2}
-                        </select>}
+                        </select>} */}
                 </div>
                 <div className="question-wrapper">
                     <Switch>

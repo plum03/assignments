@@ -7,8 +7,8 @@ class Question extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            question: {},
-            alertMsg: ""
+            alertMsg: "",
+            color: "crimson"
         }
         this.handleClick = this.handleClick.bind(this)
     }
@@ -22,11 +22,18 @@ class Question extends Component {
             return {
                 // toggleAlert: currentQ.answers.toString() === value ? true : false,
                 alertMsg: currentQ.answers.toString() === value ? "Correct" : "Try again",
+                color: currentQ.answers.toString() === value ? "green" : "crimson",
             } 
         })      
     }
 
-    componentDidMount() {}
+    componentWillReceiveProps() {
+        this.setState ({
+            alertMsg: ""
+        })
+    }
+
+
     render() {
         let {loading, data} = this.props;
         let {questionId} = this.props.match.params;
@@ -48,7 +55,7 @@ class Question extends Component {
                         <option className="answer-option" onClick={this.handleClick} value="4">{currentQ.option4}</option>
                     </li>
                 </ul>
-                <h3 id="answer-message">{this.state.alertMsg}</h3>
+                <h3 style={{color: this.state.color}} id="answer-message">{this.state.alertMsg}</h3>
             </div>)
     }
 }
