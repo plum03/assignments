@@ -17,7 +17,7 @@ let queryObj = {
 let filterDatabase = (query, collection) => {
     return collection.filter((resource) => {
         // this will return true or false
-        for (let key in collection) {
+        for (let key in query) {
             // check if query matches resource
             if(query[key] !== resource[key]) {
                 // query is the object key is the name
@@ -30,3 +30,6 @@ let filterDatabase = (query, collection) => {
         return true;
     })
 }
+
+console.log(filterDatabase(queryObj, collection))
+
