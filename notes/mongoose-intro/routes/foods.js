@@ -30,7 +30,7 @@ foodRoutes.get("/:id", (req, res) => {
 // must npm i -S body-parser to use .body
 // {new: true} means that the new info will be returned to the user, default is to return prev info
 foodRoutes.put("/:id", (req, res) => {
-   Food.gindByIdAndUpdata(req.params.id, req.body, {new: true}, (err, updatedFood) => {
+   Food.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedFood) => {
        if (err) return res.status(500).send(err);
        return res.send(updatedFood)
    })
