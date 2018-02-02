@@ -3,6 +3,7 @@ const ismsRouter = express.Router()
 const ismModel = require('../models/isms')
 
 ismsRouter.route("/")
+    // add new vote
     .post((req, res) => {
         let newIsm = new ismModel(req.body);
         newIsm.save((err, savedIsm) => {
@@ -13,7 +14,7 @@ ismsRouter.route("/")
             }
         })
     })
-
+    // return all votes
     .get((req, res) => {
         // the result of .find() is always an array
         ismModel.find(req.query, (err, foundIsms) => {

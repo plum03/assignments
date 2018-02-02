@@ -1,1 +1,0 @@
-Here is a collection of my VSchool class projects.
