@@ -1,7 +1,8 @@
 const chai = require("chai");
 const assert = chai.assert;
 
-const isPalindrome = require("../index");
+const isPalindrome = require("../index")
+const isPalindrome2 = require('../index')
 
 const tests = {
     case1: "Star Rats!",
@@ -25,10 +26,10 @@ const test = ["Star Rats!", "palindrome", "I madam, I made radio! So I dared! Am
 
 describe("checks if str is palindrome", () => {
     it("should return true", () => {
-        assert.equal(isPalindrome(test[0]), true);
-        assert.equal(isPalindrome(test[2]), true);
+        assert.equal(isPalindrome2(test[0]), true);
+        assert.equal(isPalindrome2(test[2]), true);
     });
     it("should return false", () => {
-        assert.equal(isPalindrome(test[1]),false);
+        assert.equal(isPalindrome2(test[1]),false);
     });
 });

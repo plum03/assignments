@@ -1,7 +1,8 @@
 const chai = require("chai");
 const assert = chai.assert;
 
-const { every, some } = require("../index.js");
+const every = require("../index.js");
+const some = require('../index.js')
 
 tests = [
     {
