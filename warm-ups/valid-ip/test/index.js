@@ -10,8 +10,8 @@ let tests = {
     case4: "12a.12.12a.12."
 }
 
-descript("validate IP address", *() => {
-    it("should return true", ()=>{
-        assert(validateIp.)
+describe("validate IP address", () => {
+    it("should return true", ()=> {
+        assert.isTrue(validateIp(tests.case1, true))
     })
 });

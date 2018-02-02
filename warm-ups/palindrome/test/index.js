@@ -25,10 +25,10 @@ const test = ["Star Rats!", "palindrome", "I madam, I made radio! So I dared! Am
 
 describe("checks if str is palindrome", () => {
     it("should return true", () => {
-        assert(isPalindrome(test[0]));
-        assert(isPalindrome(test[2]));
+        assert.equal(isPalindrome(test[0]), true);
+        assert.equal(isPalindrome(test[2]), true);
     });
     it("should return false", () => {
-        assert(!isPalindrome(test[1]));
+        assert.equal(isPalindrome(test[1]),false);
     });
 });

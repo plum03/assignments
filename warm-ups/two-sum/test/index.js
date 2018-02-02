@@ -16,8 +16,11 @@ const test = [
     },
 ]
 
-describe("search array for index of two numbers that add to the target number", function() {
-    it("should return [0,2]", function() {
-        assert.equal(twoSum(test[0].param1, ))
+describe("search array for index of two numbers that add to the target number", () => {
+    it("should return [0,2]", () => {
+        assert.deepEqual(twoSum(test[0].param1, test[0].param2), [0,2])
+    })
+    it("should return [1,2]", () => {
+        assert.deepEqual(twoSum(test[1].param1, test[1].param2), [1,2])
     })
 })
